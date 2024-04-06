@@ -6,6 +6,7 @@ name: Go
 on:
   push:
     branches: [ "master" ]
+    tage: '*'
   pull_request:
     branches: [ "master" ]
 
@@ -28,4 +29,7 @@ jobs:
       run: |
         git pull
         git fetch --prune --unshallow
-        make release
+        export latest="$(git describe --tags `git rev-list --tags --max-count=1`)"
+        echo github.com/frontside/multiline@$latest
+        GOPROXY=proxy.golang.org go list -m github.com/frontside/multiline@$latest
+
