@@ -16,3 +16,8 @@ mls := String(`First line.
 >>> All leading whitespace will be removed.`)
 ```
 
+### Release
+
+- update version in version.go
+- Merge to master, wait for workflow to finish successfully (does not publish new version)
+- Run make release locally 
