@@ -29,5 +29,5 @@ jobs:
         git pull
         git fetch --prune --unshallow
         export latest="$(git describe --tags `git rev-list --tags --max-count=1`)" 
-        curl https://proxy.golang.org/github.com/frontside/go-multiline/@v/$latest.info 
+        curl https://proxy.golang.org/github.com/frontside/multiline/@v/$latest.info 
 
