@@ -1,5 +1,5 @@
-go-multiline
-============
+multiline
+=========
 
 ```
 go get github.com/frontside/multiline 
